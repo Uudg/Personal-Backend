@@ -31,10 +31,6 @@ app
             prefix: '/api'
         }),
     })
-    .register(fastifyAutoload, {
-        dir: path.join(__dirname, 'src', 'plugins'),
-        options: Object.assign({})
-    })
     .register(fastifyCors, {
         origin: '*',
         methods: ['GET', 'POST', 'PUT', 'DELETE']
